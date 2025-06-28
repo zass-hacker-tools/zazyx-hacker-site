@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #0d0d0d;
+  color: #33ff33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+}
